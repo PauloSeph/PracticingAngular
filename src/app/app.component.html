@@ -1,6 +1,20 @@
 
 
-<p [appNovo]="'red'" [corPadrao]="'grey'" >
-  Testando a diretiva
-</p>
+<div *ngIf="mostrarCursos">
+  Lista de cursos
+</div>
+
+
+  <div ngElse [gururu]="mostrarCursos">
+    Não existem cursos
+  </div>
+
+
+
+
+<br>
+
+<button (click)="onMostrarCursos()">
+  Mostrar ou esconder cursos
+</button>
 

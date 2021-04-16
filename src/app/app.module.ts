@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {ElsePersonalizadoDirective} from './shared/else-personalizado.directive'
 import { RainbowDirective } from './shared/highlight-mouse.directive';
 import { NovoDirective } from './shared/novo.directive';
-import { ElsePersonalizadoDirective } from './else-personalizado.directive';
+
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ElsePersonalizadoDirective } from './else-personalizado.directive';
     RainbowDirective,
     NovoDirective,
     ElsePersonalizadoDirective
+
   ],
   imports: [
     BrowserModule,

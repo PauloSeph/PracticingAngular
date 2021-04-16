@@ -7,5 +7,9 @@ import { Component, HostBinding, Input } from '@angular/core';
 })
 export class AppComponent {
 
+  mostrarCursos: boolean = false;
 
+  onMostrarCursos() {
+    this.mostrarCursos = !this.mostrarCursos;
+  }
 }
