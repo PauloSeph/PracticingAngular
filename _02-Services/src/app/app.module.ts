@@ -19,7 +19,7 @@ import { CursosModule } from './cursos/cursos.module';
     CriarCursoModule,
     CursosModule
   ],
-  // providers: [CursosService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
