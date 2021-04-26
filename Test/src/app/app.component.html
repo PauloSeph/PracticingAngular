@@ -1,0 +1,18 @@
+
+<!--
+<ng-template Testando [numeros]="[1, 2, 3, 5]" let-item>
+  <li>{{item}}</li>
+</ng-template> -->
+
+<div *myTestando="let item nada [1, 2, 3]" >
+  <li>{{item}}</li>
+</div>
+
+
+<ng-template myTestando [myTestandoFrom]="[1, 4, 5]" let-items>
+  <li>
+    {{items}}
+  </li>
+</ng-template>
+
+

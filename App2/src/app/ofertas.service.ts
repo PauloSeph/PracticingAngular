@@ -32,7 +32,7 @@ export class OfertasService {
                 {url: "/assets/ofertas/2/img3.jpg"},
                 {url: "/assets/ofertas/2/img4.jpg"}
             ]
-        
+
         },
         {
             id: 4,
@@ -52,7 +52,7 @@ export class OfertasService {
             ]
         }
     ]
-    
+
     public getOfertas(): Array<Oferta> {
         return this.ofertas
     }
@@ -62,27 +62,27 @@ export class OfertasService {
             //algum tipo de processamento, que ao finalizar, chama a função resolve ou a função reject
             //console.log('será que passou por aqui?')
             let deu_certo = true
-            
+
             if(deu_certo) {
                 setTimeout(() => resolve( this.ofertas ), 3000)
-                
+
             } else {
                 reject({ codigo_erro: 404, mensagem_erro: 'Servidor não encontrado XYZ' })
             }
         })
-        .then(( ofertas: Oferta[]) => {
+        .then(( ofertas: Oferta[] | any) => {
             //fazer alguma tratativa
             console.log('primeiro then')
             return ofertas
         })
-        .then(( ofertas: Oferta[]) => {
+        .then(( ofertas: Oferta[] | any) => {
             //fazer uma outra tratativa
             console.log('segundo then')
             return new Promise((resolve2, reject2) => {
                 setTimeout(() => { resolve2( ofertas ) },3000)
             })
         })
-        .then(( ofertas: Oferta[] ) => {
+        .then(( ofertas: Oferta[] | any) => {
             console.log('terceiro then executado após 3 segundos porque estava aguardando uma promisse ser resolvida')
             return ofertas
         })
