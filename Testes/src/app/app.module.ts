@@ -1,0 +1,29 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
+import { TestandoDirective } from './shared/testando.directive';
+import { OnlyMyBaconDirective } from './shared/only-my-bacon.directive';
+import { BindingHostDirective } from './shared/binding-host.directive';
+import { CamelCasePipe } from './camel-case.pipe';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FundoAmareloDirective,
+    TestandoDirective,
+    OnlyMyBaconDirective,
+    BindingHostDirective,
+    CamelCasePipe,
+
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
